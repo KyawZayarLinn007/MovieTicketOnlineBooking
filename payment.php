@@ -28,7 +28,7 @@
             <!--buttons-->
             <div class="col-4 text-center">
                 <div class="button">
-                    <a href="#" class="btn btn-light button-item">
+                    <a href="#" class="btn btn-light button-item" style="background-color: red; color:white">
                         <div>
                             <i class="fab fa-cc-visa fa-lg"></i><span>Master/Visa</span>
                         </div>
@@ -119,7 +119,65 @@
             <div class="col 3"></div>
         </div>
 
+        <script>
+            let btn = document.getElementsByClassName('button');
 
+            /* master/visa */
+            btn[0].addEventListener('click', () => {
+                let btn_item = document.getElementsByClassName('button-item');
+                btn_item[0].style.color = 'white';
+                btn_item[0].style.backgroundColor = 'red';
+
+                btn_item[1].style.color = 'black';
+                btn_item[1].style.backgroundColor = 'white';
+                btn_item[2].style.color = 'black';
+                btn_item[2].style.backgroundColor = 'white';
+                btn_item[3].style.color = 'black';
+                btn_item[3].style.backgroundColor = 'white';
+            })
+
+            /* credit card */
+            btn[1].addEventListener('click', () => {
+                let btn_item = document.getElementsByClassName('button-item');
+                btn_item[1].style.color = 'white';
+                btn_item[1].style.backgroundColor = 'red';
+
+                btn_item[0].style.color = 'black';
+                btn_item[0].style.backgroundColor = 'white';
+                btn_item[2].style.color = 'black';
+                btn_item[2].style.backgroundColor = 'white';
+                btn_item[3].style.color = 'black';
+                btn_item[3].style.backgroundColor = 'white';
+            })
+
+            /* paypal card */
+            btn[2].addEventListener('click', () => {
+                let btn_item = document.getElementsByClassName('button-item');
+                btn_item[2].style.color = 'white';
+                btn_item[2].style.backgroundColor = 'red';
+
+                btn_item[0].style.color = 'black';
+                btn_item[0].style.backgroundColor = 'white';
+                btn_item[1].style.color = 'black';
+                btn_item[1].style.backgroundColor = 'white';
+                btn_item[3].style.color = 'black';
+                btn_item[3].style.backgroundColor = 'white';
+            })
+
+            /* money pay */
+            btn[3].addEventListener('click', () => {
+                let btn_item = document.getElementsByClassName('button-item');
+                btn_item[3].style.color = 'white';
+                btn_item[3].style.backgroundColor = 'red';
+
+                btn_item[0].style.color = 'black';
+                btn_item[0].style.backgroundColor = 'white';
+                btn_item[1].style.color = 'black';
+                btn_item[1].style.backgroundColor = 'white';
+                btn_item[2].style.color = 'black';
+                btn_item[2].style.backgroundColor = 'white';
+            })
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>
 
