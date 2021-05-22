@@ -1,0 +1,67 @@
+  img[alt="profile_image"] {
+    width: 200px;
+    height: 300px;
+
+  }
+
+  img[alt="sample_img"] {
+    width: 150px;
+    height: 250px;
+    margin: 20px;
+  }
+
+  /* on hover button coming soon*/
+  span:hover img[alt="sample_img"]{
+    filter: opacity(20%);
+    transition: filter 0.1s ease-in-out;
+  }
+  span .hidden{
+    display: none;
+  }
+  span:hover .hidden{
+    display: block;
+  }
+
+/* profile text breakpoint */
+@media (max-width: 764px) {
+  .bp{
+    padding-left: 50px;
+  }
+}
+
+  body{
+    background-color: black;
+  }
+
+  h3,.color p{
+    color: white;
+  }
+
+  i{
+    padding-right: 5px;
+  }
+
+  /* iframe responsive */
+  .contain {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
+  
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* booking button hover*/
+  .booking_button:hover .booking_inside{
+    background-color: black;
+    color: red;
+  }

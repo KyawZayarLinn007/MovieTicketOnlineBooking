@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+/* responsive when under 770px */
+@media (max-width: 770px){
+    span{
+        display: none;
+    }
+    i{
+        text-align: center;
+        vertical-align: center;
+    }
+}
+
+/* method button hover */
+.button:hover .button-item{
+    background-color: red;
+    color: white;
+}
+
+/* proceed button hover */
+.proceed_button:hover .proceed_item{
+    background-color: black;
+    color: red;
+}
