@@ -8,7 +8,6 @@
     <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> -->
     <script src="https://kit.fontawesome.com/d3c6e66500.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="payment_style.css">
 
@@ -65,6 +64,8 @@
             <div class="col-8">
                 <!--form-->
                 <form action="">
+
+                    <!-- first card -->
                     <div class="card text-dark bg-light mb-3">
                         <!--name-->
                         <div class="row">
@@ -103,6 +104,73 @@
 
                     </div>
 
+                    <!-- second card -->
+                    <div class="card text-dark bg-light mb-3">
+                        <!--name-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="m-3">
+                                    <label for="name" class="form-label">Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                </div>
+                            </div>
+                        </div>
+                        <!--cardno-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="m-3">
+                                    <label for="card_no" class="form-label">Card No:</label>
+                                    <input type="text" class="form-control" id="card_no" name="card_no" placeholder="Enter your card number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--expires-->
+                            <div class="col-6">
+                                <div class="m-3">
+                                    <label for="expires" class="form-label">Expires:</label>
+                                    <input type="text" class="form-control" id="expires" name="expires" placeholder="Enter your expiry date">
+                                </div>
+                            </div>
+                            <!--SSN-->
+                            <div class="col-6">
+                                <div class="m-3">
+                                    <label for="ssn" class="form-label">SSN:</label>
+                                    <input type="text" class="form-control" id="ssn" name="ssn" placeholder="Enter your SSN">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- third card -->
+                    <div class="card text-dark bg-light mb-3">
+                        <!--email-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mx-3 mt-5 mb-4">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                                </div>
+                            </div>
+                        </div>
+                        <!--cardno-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mx-3 mt-5 mb-5">
+                                    <label for="card_no" class="form-label">Card No:</label>
+                                    <input type="text" class="form-control" id="card_no" name="card_no" placeholder="Enter your card number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- fourth card -->
+                    <div class="card text-dark bg-light mb-3 text-center">
+                        <br><br><br><br><br><br>
+                        You must pay cash before 1 hour of the screen time!!!
+                        <br><br><br><br><br><br>
+                    </div>
             </div>
         </div>
 
@@ -121,6 +189,22 @@
 
         <script>
             let btn = document.getElementsByClassName('button');
+            const content = document.getElementsByClassName('card');
+
+            function hideAll(){
+                content[0].style.display = 'none';
+                content[1].style.display = 'none';
+                content[2].style.display = 'none';
+                content[3].style.display = 'none';
+            }
+
+            function showOnly(c){
+                hideAll();
+                c.style.display = '';
+            }
+
+            /* initial show */
+            showOnly(content[0]);
 
             /* master/visa */
             btn[0].addEventListener('click', () => {
@@ -134,6 +218,8 @@
                 btn_item[2].style.backgroundColor = 'white';
                 btn_item[3].style.color = 'black';
                 btn_item[3].style.backgroundColor = 'white';
+
+                showOnly(content[0]);
             })
 
             /* credit card */
@@ -148,6 +234,8 @@
                 btn_item[2].style.backgroundColor = 'white';
                 btn_item[3].style.color = 'black';
                 btn_item[3].style.backgroundColor = 'white';
+
+                showOnly(content[1]);
             })
 
             /* paypal card */
@@ -162,6 +250,8 @@
                 btn_item[1].style.backgroundColor = 'white';
                 btn_item[3].style.color = 'black';
                 btn_item[3].style.backgroundColor = 'white';
+
+                showOnly(content[2]);
             })
 
             /* money pay */
@@ -176,7 +266,10 @@
                 btn_item[1].style.backgroundColor = 'white';
                 btn_item[2].style.color = 'black';
                 btn_item[2].style.backgroundColor = 'white';
+
+                showOnly(content[3]);
             })
+
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </body>
